@@ -52,6 +52,7 @@ To generate sample credit card data:
 
 ```bash
 cd credit_card/load_data
+python create_orders.py
 python create_accounts.py
 python create_users.py
 python create_transactions.py
@@ -74,9 +75,8 @@ Use the query scripts to analyze and retrieve data based on hierarchical IDs:
 
 ```bash
 cd credit_card/query_data
-python query_users.py --hierarchy "CLI_000023-BAN_000088-AGE_000045"
+python query_users.py
 ```
-
 The system supports partial hierarchies to query at any level of the organization structure.
 
 ## Data Analysis Capabilities

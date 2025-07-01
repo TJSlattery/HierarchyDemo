@@ -1,6 +1,7 @@
 import pymongo
 import random
 import datetime
+import os
 from faker import Faker
 
 # Initialize Faker for realistic data
@@ -8,7 +9,7 @@ fake = Faker()
 
 # MongoDB connection details
 # Ensure this is your writable cluster connection string
-MONGO_CONNECTION_STRING = "mongodb+srv://main_user:AdminAdmin1@cluster1.fgc5a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1"
+MONGO_CONNECTION_STRING = os.environ.get('CLUSTER1_URI')
 DB_NAME = "credit_card"  # Your database name
 COLLECTION_NAME = "accounts" # New collection name for accounts
 

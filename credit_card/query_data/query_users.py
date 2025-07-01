@@ -1,8 +1,9 @@
 import json
+import os
 from pymongo import MongoClient
 
 # --- Configuration ---
-MONGO_CONNECTION_STRING = "mongodb+srv://main_user:AdminAdmin1@cluster1.fgc5a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1"
+MONGO_CONNECTION_STRING = os.environ.get('CLUSTER1_URI')
 DATABASE_NAME = "credit_card"
 COLLECTION_NAME = "accounts"
 PREFIX_FILE = "hierarchy_query.json"

@@ -1,6 +1,7 @@
 import pymongo
 import random
 import datetime
+import os
 from faker import Faker
 from bson.decimal128 import Decimal128 # Import Decimal128 if you decide to use it for other fields
 
@@ -8,7 +9,7 @@ from bson.decimal128 import Decimal128 # Import Decimal128 if you decide to use 
 fake = Faker()
 
 # MongoDB connection details
-MONGO_CONNECTION_STRING = "mongodb+srv://main_user:AdminAdmin1@cluster1.fgc5a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1"
+MONGO_CONNECTION_STRING = os.environ.get('CLUSTER1_URI')
 DB_NAME = "credit_card"  # Your database name
 COLLECTION_NAME = "transactions" # New collection name
 
